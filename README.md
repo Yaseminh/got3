@@ -5,13 +5,13 @@ Simple example App with Angular 16.x
 ## Install Project
 
 ```
-    $ yarn install
+    $ npm install
 ```
 
 ## Run App
 
 ```
-  $ yarn start
+  $ npm start
 ```
 
 ## Settings url endpoint on file ```environment.ts```
