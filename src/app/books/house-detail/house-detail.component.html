@@ -1,0 +1,28 @@
+<div class="container" *ngIf="hero$ as hero">
+  <button style="color: #a9c1da;transform: scale(1.5)"  type="button" class="btn btn-lg btn-link mt-5" (click)="gotoHeroes(hero)"><i class="bi bi-backspace-fill"></i></button>
+  <div class="row mb-2">
+    <div class="col-md-12 d-flex align-items-center justify-content-center"><h2>House Details</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <div >
+        <h6>House Name : </h6>
+        <div class="d-flex align-items-center justify-content-center" style="border-radius: 5px;font-size: larger;background: #ffa0002e">
+          <h7>{{ hero.name }}</h7>
+        </div>
+        <ul class="list-group">
+          <li *ngFor="let hero of hero.members;" style="border: 2px solid #e5e7eb"  class="list-group-item my-1 px-1 py-1">
+            <span><h6 >Member Name :</h6></span>
+            <div class="mb-2 d-flex align-items-center justify-content-center" style="font-size: larger;background: #a9c1da">
+              <h7>{{ hero?.name }}</h7>
+            </div>
+            <span><h6 >Member Slug  :</h6></span>
+            <div class="d-flex align-items-center justify-content-center" style="font-size: larger;background: #a9c1da">
+              <h7>{{ hero?.slug }}</h7>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

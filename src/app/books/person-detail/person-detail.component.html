@@ -1,0 +1,43 @@
+
+<div class="container" *ngIf="person$ as hero">
+  <div class="row" >
+    <div class="d-flex justify-content-between">
+      <div>
+        <button style="color: #a9c1da;transform: scale(1.5)"  type="button" class="btn btn-lg btn-link mt-5" (click)="gotoHeroes(hero)"><i class="bi bi-backspace-fill"></i></button>
+      </div>
+      <div>
+        <button type="button"  class="btn btn-lg mt-5" (click)="goQuoteOfCharacter(person$.slug)">Get Quotes Of {{person$.name}} <i class="bi bi-chat-left-quote"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-12 d-flex align-items-center justify-content-center"><h2>Person Details</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <div >
+        <h6 >Person Name : </h6>
+        <div class="d-flex align-items-center justify-content-center" style="font-size: larger;background: #a9c1da">
+          <h7>{{ hero.name }}</h7>
+        </div>
+        <h6 >House Slug : </h6>
+        <div class="d-flex align-items-center justify-content-center" style="font-size: larger;background: #a9c1da">
+          <h7>{{ hero.house?.slug }}</h7>
+        </div>
+        <h6 >House Name : </h6>
+        <div class="d-flex align-items-center justify-content-center" style="font-size: larger;background: #a9c1da">
+          <h7>{{ hero.house?.name }}</h7>
+        </div>
+        <ul class="list-group">
+          <span><h6 >Quotes :</h6></span>
+          <li *ngFor="let hero of hero.quotes;" class="list-group-item my-1 px-1 py-1">
+
+            <div class="mb-1 d-flex align-items-center justify-content-center" style="font-size: larger;background: #ffa0002e">
+              <h7>“{{ hero }}”</h7>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

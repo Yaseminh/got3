@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row mb-2">
+    <div class="col-md-12 d-flex align-items-center justify-content-center"><h4>Persons</h4></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="searchString"
+        placeholder="Search by name or slug"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <ul class="list-group">
+        <li *ngFor="let hero of persons | searchName: searchString;" class="list-group-item my-1 px-1 py-1"
+            style="background: #ffa000">
+          <button type="button" class="list-group-item list-group-item-action" [routerLink]="['/person', hero.slug]">
+            <span style="font-size: larger"
+                  class="d-flex align-items-center justify-content-center">{{ hero.name }}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!--  <div *ngFor="let hero of persons | searchName: searchString;" >-->
+<!--    <a [routerLink]="['/person', hero.slug]">-->
+<!--      <span>{{ hero.name }}</span>-->
+<!--    </a>-->
+<!--  </div>-->
+</div>

@@ -1,0 +1,32 @@
+<!--<div class="container">-->
+<!--    <h2>List Quotes</h2>-->
+<!--  <button (click)="goRandomQuotes()">Get Random Quotes</button>-->
+<!--  <div *ngFor="let hero of randomQuotes;">-->
+<!--    <h4>{{ hero.sentence }}</h4>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container">
+  <div class="row mb-2">
+    <div class="col-md-12 d-flex align-items-center justify-content-center"><h4>List Quotes</h4></div>
+  </div>
+  <div class="row mb-2" >
+    <div class="d-flex justify-content-between">
+      <div>
+      </div>
+      <div>
+        <button type="button"  class="btn btn-lg mt-5" (click)="goRandomQuotes()">Get Random Quotes  <i class="bi bi-chat-left-quote"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mb-2">
+      <ul class="list-group">
+        <li *ngFor="let hero of randomQuotes;" class="list-group-item my-1 px-1 py-1"
+            style="background: #ffa0002e">
+            <span style="font-size: larger"
+                  class="d-flex align-items-center justify-content-center"> “{{ hero.sentence }}”</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
