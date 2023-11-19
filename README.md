@@ -1,4 +1,4 @@
-# angular-app-book
+# angular-app-game-of-thrones
 
 Simple example App with Angular 16.x
 
