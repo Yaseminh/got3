@@ -1,6 +1,6 @@
 # angular-app-game-of-thrones
 
-Simple example App with Angular 16.x
+Simple example App with Angular 17.x
 
 ## Install Project
 
